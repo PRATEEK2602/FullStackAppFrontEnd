@@ -15,6 +15,18 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center', // Centering the text horizontally
+    fontWeight: 'bold', // Making the text bold
+    color: '#FFFF00', // Setting the light orange color
+  },
+  appBar: {
+    backgroundImage: `url('https://i.etsystatic.com/34656703/r/il/ca5740/5353829314/il_600x600.5353829314_a0v1.jpg')`, // Replace with your image URL
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    opacity: 0.7, // Making the background image more transparent
   },
 }));
 
@@ -23,15 +35,14 @@ export default function Appbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Spring Boot React Full Stack Application 
+            Welcome to Biyah.com
           </Typography>
-         
         </Toolbar>
       </AppBar>
     </div>
